@@ -8,10 +8,10 @@ permissions: {}
 jobs:
   warrior:
     runs-on: ubuntu-latest
-    timeout-minutes: 999
+    timeout-minutes: 355
 
     env:
-      DOWNLOADER: ${{ github.actor }}
+      DOWNLOADER: jgm240
       SELECTED_PROJECT: applediscussions
       CONCURRENT_ITEMS: "1"
 
