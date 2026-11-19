@@ -1,0 +1,26 @@
+name: ArchiveTeam Apple Discussions Warrior
+
+on:
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  warrior:
+    runs-on: ubuntu-latest
+    timeout-minutes: 999
+
+    env:
+      DOWNLOADER: ${{ github.actor }}
+      SELECTED_PROJECT: applediscussions
+      CONCURRENT_ITEMS: "1"
+
+    steps:
+      - name: Run ArchiveTeam Warrior
+        run: |
+          docker run --rm \
+            --name archiveteam-warrior \
+            --env DOWNLOADER \
+            --env SELECTED_PROJECT \
+            --env CONCURRENT_ITEMS \
+            atdr.meo.ws/archiveteam/warrior-dockerfile
