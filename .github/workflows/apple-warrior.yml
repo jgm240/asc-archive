@@ -8,7 +8,7 @@ permissions: {}
 jobs:
   warrior:
     runs-on: ubuntu-latest
-    timeout-minutes: 355
+    timeout-minutes: 999
 
     env:
       DOWNLOADER: jgm240
